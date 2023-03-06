@@ -1,15 +1,13 @@
+import { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from '~/pages'
 import { withProviders } from './providers'
 
-import { Title, Button, Text } from '@mantine/core'
-
-const App = () => {
-  return (
-    <div>
-      <Title order={2}>Lol</Title>
-      <Text>text</Text>
-      <Button size="xs">Lol</Button>
-    </div>
-  )
-}
+const App = () => (
+  <Suspense>
+    <RouterProvider router={router} />
+  </Suspense>
+)
 
 export default withProviders(App)
