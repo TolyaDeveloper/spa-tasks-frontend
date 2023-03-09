@@ -15,6 +15,9 @@ export const GlobalStyles = () => (
       },
       a: {
         display: 'inline-block'
+      },
+      p: {
+        margin: 0
       }
     })}
   />

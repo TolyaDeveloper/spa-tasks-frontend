@@ -1,5 +1,7 @@
 import { MantineThemeOverride } from '@mantine/core'
 
+import { Text } from './defaults/text'
+
 export const theme: MantineThemeOverride = {
   respectReducedMotion: true,
   cursorType: 'pointer',
@@ -22,6 +24,9 @@ export const theme: MantineThemeOverride = {
   spacing: { xs: '5px', sm: '10px', md: '15px', lg: '25px', xl: '30px' },
   primaryColor: 'accent',
   primaryShade: 5,
+  components: {
+    Text
+  },
   colors: {
     accent: [
       '#ecf6f5',
