@@ -1,3 +1,5 @@
+import { BoxWrapper } from '~/shared/ui'
+
 export const TasksBox = () => {
-  return <div>TasksBox</div>
+  return <BoxWrapper>TasksBox</BoxWrapper>
 }

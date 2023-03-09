@@ -1,3 +1,5 @@
+import { BoxWrapper } from '~/shared/ui'
+
 export const SuccessBox = () => {
-  return <div>SuccessBox</div>
+  return <BoxWrapper>SuccessBox</BoxWrapper>
 }

@@ -1,3 +1,5 @@
+import { BoxWrapper } from '~/shared/ui'
+
 export const ProfileBox = () => {
-  return <div>ProfileBox</div>
+  return <BoxWrapper>ProfileBox</BoxWrapper>
 }
