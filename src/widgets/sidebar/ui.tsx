@@ -1,3 +1,5 @@
+import { BoxWrapper } from '~/shared/ui'
+
 export const Sidebar = () => {
-  return <div>ui</div>
+  return <BoxWrapper>ui</BoxWrapper>
 }

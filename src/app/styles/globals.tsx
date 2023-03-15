@@ -12,6 +12,12 @@ export const GlobalStyles = () => (
           theme.colorScheme === 'dark'
             ? theme.colors['primary-dark-theme'][0]
             : theme.colors['primary-white-theme'][9]
+      },
+      a: {
+        display: 'inline-block'
+      },
+      p: {
+        margin: 0
       }
     })}
   />

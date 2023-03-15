@@ -1,5 +1,7 @@
 import { MantineThemeOverride } from '@mantine/core'
 
+import { Text } from './defaults/text'
+
 export const theme: MantineThemeOverride = {
   respectReducedMotion: true,
   cursorType: 'pointer',
@@ -10,18 +12,21 @@ export const theme: MantineThemeOverride = {
   shadows: {
     md: 'drop-shadow(0px 10px 25px rgba(29, 52, 54, 0.08))'
   },
-  radius: { xs: 4, sm: 5, md: 8, lg: 10 },
-  fontSizes: { xs: 12, sm: 14, md: 16, lg: 25, xl: 36 },
+  radius: { xs: '4px', sm: '5px', md: '8px', lg: '10px' },
+  fontSizes: { xs: '12px', sm: '14px', md: '16px', lg: '25px', xl: '36px' },
   headings: {
     fontFamily: 'Nunito, sans-serif',
     sizes: {
-      h2: { fontSize: 24, fontWeight: 600, lineHeight: '33px' },
-      h3: { fontSize: 18, fontWeight: 600, lineHeight: '25px' }
+      h2: { fontSize: '24px', fontWeight: 600, lineHeight: '33px' },
+      h3: { fontSize: '18px', fontWeight: 600, lineHeight: '25px' }
     }
   },
-  spacing: { xs: 5, sm: 10, md: 15, lg: 25, xl: 30 },
+  spacing: { xs: '5px', sm: '10px', md: '15px', lg: '25px', xl: '30px' },
   primaryColor: 'accent',
   primaryShade: 5,
+  components: {
+    Text
+  },
   colors: {
     accent: [
       '#ecf6f5',
