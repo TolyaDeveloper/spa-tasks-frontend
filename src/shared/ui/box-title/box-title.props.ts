@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export interface ISuccessBoxProps {
+export interface IBoxTitleProps {
   title: string
   rightIcon?: ReactNode
 }

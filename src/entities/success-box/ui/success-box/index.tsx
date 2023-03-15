@@ -1,17 +1,13 @@
-import { Title, Flex } from '@mantine/core'
+import { Flex } from '@mantine/core'
 
-import { BoxWrapper } from '~/shared/ui'
-import { ReactComponent as DotsIcon } from '~/shared/icons/dots.svg'
+import { BoxWrapper, BoxTitle } from '~/shared/ui'
 import { CircleStatus } from '../circle-status'
 import { ISuccessBoxProps } from './success-box.props'
 
-export const SuccessBox = ({ title }: ISuccessBoxProps) => {
+export const SuccessBox = ({ title, rightIcon }: ISuccessBoxProps) => {
   return (
     <BoxWrapper>
-      <Flex justify="space-between" align="center">
-        <Title order={2}>{title}</Title>
-        <DotsIcon />
-      </Flex>
+      <BoxTitle title={title} rightIcon={rightIcon} />
       <Flex gap="md" justify="space-between" wrap="wrap">
         <CircleStatus count={110} innerTitle="tasks" outerTitle="made" />
         <CircleStatus count={140} innerTitle="tasks" outerTitle="made" />
