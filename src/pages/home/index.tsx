@@ -15,7 +15,7 @@ const Home = () => {
         <div>Home</div>
       </BoxWrapper>
       <SuccessBox title="Some title" />
-      <NavLink to={ROUTES.profile}>Go to profile</NavLink>
+      <NavLink to={ROUTES['/profile']}>Go to profile</NavLink>
       <TimeLabel />
       <DateLabel />
       <ThemeSwitch />
