@@ -4,4 +4,5 @@ export interface ISuccessBoxProps {
   title: string
   children: ReactNode
   rightIcon?: ReactNode
+  className?: string
 }

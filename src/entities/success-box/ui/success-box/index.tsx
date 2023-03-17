@@ -6,10 +6,11 @@ import { ISuccessBoxProps } from './success-box.props'
 export const SuccessBox = ({
   title,
   rightIcon,
-  children
+  children,
+  className
 }: ISuccessBoxProps) => {
   return (
-    <BoxWrapper>
+    <BoxWrapper className={className}>
       <BoxTitle title={title} rightIcon={rightIcon} />
       <Flex gap="md" justify="space-between" wrap="wrap">
         {children}

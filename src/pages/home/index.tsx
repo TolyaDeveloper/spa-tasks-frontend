@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 
 import { ROUTES } from '~/shared/config'
-import { HomeSkeleton } from '~/shared/ui'
+import { HomeSkeleton, CircleStatus } from '~/shared/ui'
 import { ReactComponent as DotsIcon } from '~/shared/icons/dots.svg'
-import { CircleStatus, SuccessBox } from '~/entities/success-box'
+import { SuccessBox } from '~/entities/success-box'
 import { TimeLabel, DateLabel } from '~/entities/time-box'
 import { ThemeSwitch } from '~/features/theme'
 
