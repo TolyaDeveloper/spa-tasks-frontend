@@ -5,7 +5,7 @@ export const useStyles = createStyles(theme => ({
     marginLeft: '300px'
   },
   topBar: {
-    marginBottom: '30px'
+    margin: '20px 0 30px 0'
   },
   main: {
     display: 'grid',
