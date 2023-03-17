@@ -1,1 +1,1 @@
-export { SuccessBox } from './ui/success-box'
+export { SuccessBox } from './ui'
