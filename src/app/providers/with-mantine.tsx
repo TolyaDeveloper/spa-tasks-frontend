@@ -13,8 +13,9 @@ import { Fonts } from '../styles/fonts'
 export const withMantine = (Component: ComponentType) => () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light')
 
-  const toggleColorScheme = (value?: ColorScheme) =>
+  const toggleColorScheme = (value?: ColorScheme) => {
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+  }
 
   return (
     <ColorSchemeProvider

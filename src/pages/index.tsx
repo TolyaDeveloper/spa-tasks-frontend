@@ -1,10 +1,12 @@
-import { lazy } from 'react'
+import { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 
 import { ROUTES } from '~/shared/config'
+import { HomeSkeleton, ProfileSkeleton } from '~/shared/ui'
 import { Layout } from '~/layouts'
-import HomePage from './home'
-import ProfilePage from './profile'
+
+const HomePage = lazy(() => import('./home'))
+const ProfilePage = lazy(() => import('./profile'))
 
 export const router = createBrowserRouter([
   {
@@ -12,11 +14,19 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        element: <HomePage />,
+        element: (
+          <Suspense fallback={<HomeSkeleton />}>
+            <HomePage />
+          </Suspense>
+        ),
         index: true
       },
       {
-        element: <ProfilePage />,
+        element: (
+          <Suspense fallback={<ProfileSkeleton />}>
+            <ProfilePage />
+          </Suspense>
+        ),
         path: ROUTES['/profile']
       }
     ]
