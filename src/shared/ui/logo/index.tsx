@@ -5,7 +5,7 @@ import { ReactComponent as LogoIcon } from './logo.svg'
 
 export const Logo = () => {
   return (
-    <NavLink to={ROUTES.home}>
+    <NavLink to={ROUTES['/']}>
       <LogoIcon />
     </NavLink>
   )

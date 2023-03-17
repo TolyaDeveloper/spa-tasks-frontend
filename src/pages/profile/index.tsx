@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <>
       <div>Profile</div>
-      <NavLink to={ROUTES.home}>Go to home</NavLink>
+      <NavLink to={ROUTES['/']}>Go to home</NavLink>
     </>
   )
 }
