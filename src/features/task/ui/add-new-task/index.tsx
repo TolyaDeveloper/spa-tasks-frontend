@@ -8,7 +8,7 @@ export const AddNewTask = () => {
 
   return (
     <>
-      <Button leftIcon={<AddTaskIcon />} onClick={open}>
+      <Button leftIcon={<AddTaskIcon />} onClick={open} size="md">
         New Task
       </Button>
       <Modal
