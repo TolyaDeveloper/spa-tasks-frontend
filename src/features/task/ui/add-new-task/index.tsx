@@ -2,13 +2,18 @@ import { useDisclosure } from '@mantine/hooks'
 import { Button, Modal } from '@mantine/core'
 
 import { ReactComponent as AddTaskIcon } from '~/shared/icons/add-task.svg'
+import { RegularIcon } from '~/shared/icons'
 
 export const AddNewTask = () => {
   const [opened, { open, close }] = useDisclosure(false)
 
   return (
     <>
-      <Button leftIcon={<AddTaskIcon />} onClick={open} size="md">
+      <Button
+        leftIcon={<RegularIcon icon="AddTaskIcon" />}
+        onClick={open}
+        size="md"
+      >
         New Task
       </Button>
       <Modal

@@ -1,10 +1,10 @@
-import { ActionIcon, useMantineColorScheme } from '@mantine/core'
+import { ActionIcon, useMantineColorScheme, Text } from '@mantine/core'
 import { useHotkeys } from '@mantine/hooks'
 
-import { ReactComponent as MoonIcon } from '~/shared/icons/moon.svg'
-import { ReactComponent as SunIcon } from '~/shared/icons/sun.svg'
+import { StrokeIcon } from '~/shared/icons'
+import { IChangeThemeProps } from './change-theme.props'
 
-export const ThemeSwitch = () => {
+export const ThemeSwitch = ({ title, ...props }: IChangeThemeProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
   const isDark = colorScheme === 'dark'
 
@@ -17,8 +17,10 @@ export const ThemeSwitch = () => {
       color="accent"
       title="Toggle color scheme"
       size="lg"
+      {...props}
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
+      {isDark ? <StrokeIcon icon="SunIcon" /> : <StrokeIcon icon="MoonIcon" />}
+      {title && <Text ml="sm">{title}</Text>}
     </ActionIcon>
   )
 }

@@ -18,7 +18,11 @@ export const useStyles = createStyles(theme => ({
     padding: '12.5px 20px',
 
     '&:hover': {
-      opacity: 0.7
+      color: theme.colors.accent[5]
+    },
+
+    '&:hover svg': {
+      stroke: `${theme.colors.accent[5]}!important`
     }
   },
   dropdownItemIcon: {
@@ -28,5 +32,16 @@ export const useStyles = createStyles(theme => ({
     backgroundColor: 'transparent',
     border: 'none',
     cursor: 'pointer'
+  },
+  themeSwitch: {
+    color: 'unset',
+
+    svg: {
+      width: '18px',
+      height: '18px'
+    }
+  },
+  premiumText: {
+    color: 'unset'
   }
 }))

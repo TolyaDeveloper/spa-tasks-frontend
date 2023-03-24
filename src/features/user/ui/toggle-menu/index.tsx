@@ -1,15 +1,12 @@
-import { Text, Flex, Avatar, ActionIcon, Popover, Button } from '@mantine/core'
+import { Text, Flex, Avatar, ActionIcon, Popover } from '@mantine/core'
 import { notifications } from '@mantine/notifications'
 import { NavLink } from 'react-router-dom'
 
 import { ROUTES } from '~/shared/config'
-import { ReactComponent as ArrowIcon } from '~/shared/icons/arrow.svg'
-import { ReactComponent as UserIcon } from '~/shared/icons/user.svg'
-import { ReactComponent as SettingsIcon } from '~/shared/icons/settings.svg'
-import { ReactComponent as LogoutIcon } from '~/shared/icons/log-out.svg'
-import { ReactComponent as PremiumStarIcon } from '~/shared/icons/premium-star.svg'
+import { RegularIcon, StrokeIcon } from '~/shared/icons'
 import { BoxWrapper } from '~/shared/ui'
 import { useStyles } from './toggle-menu.styles'
+import { ThemeSwitch } from '../change-theme'
 
 export const ToggleMenu = () => {
   const { classes, cx } = useStyles()
@@ -30,28 +27,45 @@ export const ToggleMenu = () => {
         <Popover.Target>
           <ActionIcon size="auto" title="Open toggle menu">
             <BoxWrapper className={classes.arrowBox}>
-              <ArrowIcon />
+              <RegularIcon icon="ArrowIcon" />
             </BoxWrapper>
           </ActionIcon>
         </Popover.Target>
         <Popover.Dropdown className={classes.dropdown}>
           <NavLink to={ROUTES['/profile']} className={classes.dropdownItem}>
-            <UserIcon className={classes.dropdownItemIcon} />
+            <StrokeIcon className={classes.dropdownItemIcon} icon="UserIcon" />
             Account
           </NavLink>
+          <ThemeSwitch
+            className={cx(classes.dropdownItem, classes.themeSwitch)}
+            variant="transparent"
+            title="Toggle theme"
+            size="auto"
+          />
           <NavLink to={ROUTES['/profile']} className={classes.dropdownItem}>
-            <SettingsIcon className={classes.dropdownItemIcon} />
+            <StrokeIcon
+              className={classes.dropdownItemIcon}
+              icon="SettingsIcon"
+            />
             Settings
           </NavLink>
-          <button
-            className={cx(classes.dropdownItem, classes.dropdownButton)}
+          <ActionIcon
+            className={cx(classes.dropdownItem, classes.premiumText)}
+            size="auto"
             onClick={openPremiumWarning}
+            variant="transparent"
           >
-            <PremiumStarIcon className={classes.dropdownItemIcon} />
-            Premium
-          </button>
+            <RegularIcon
+              className={classes.dropdownItemIcon}
+              icon="PremiumStarIcon"
+            />
+            <Text>Premium</Text>
+          </ActionIcon>
           <NavLink to={ROUTES['/profile']} className={classes.dropdownItem}>
-            <LogoutIcon className={classes.dropdownItemIcon} />
+            <StrokeIcon
+              className={classes.dropdownItemIcon}
+              icon="LogoutIcon"
+            />
             Log out
           </NavLink>
         </Popover.Dropdown>
