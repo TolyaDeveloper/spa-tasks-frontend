@@ -14,7 +14,9 @@ export const GlobalStyles = () => (
             : theme.colors['primary-white-theme'][9]
       },
       a: {
-        display: 'inline-block'
+        display: 'inline-block',
+        color: 'inherit',
+        textDecoration: 'none'
       },
       p: {
         margin: 0

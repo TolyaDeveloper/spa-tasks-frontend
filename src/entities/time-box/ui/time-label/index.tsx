@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Flex, Text } from '@mantine/core'
 
-import { ReactComponent as ClockIcon } from '~/shared/icons/clock.svg'
+import { StrokeIcon } from '~/shared/icons'
 
 export const TimeLabel = () => {
   const [time, setTime] = useState<Date>(new Date())
@@ -18,7 +18,7 @@ export const TimeLabel = () => {
 
   return (
     <Flex gap="sm" align="center">
-      <ClockIcon />
+      <StrokeIcon icon="ClockIcon" />
       <Text component="time" size="lg" weight={600}>
         {time.toLocaleTimeString()}
       </Text>

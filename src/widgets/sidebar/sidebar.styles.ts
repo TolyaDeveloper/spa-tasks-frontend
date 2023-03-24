@@ -5,6 +5,8 @@ export const useStyles = createStyles(theme => ({
     width: '230px',
     position: 'fixed',
     maxWidth: '100%',
-    height: '100%'
+    height: '100%',
+    top: 0,
+    bottom: 0
   }
 }))

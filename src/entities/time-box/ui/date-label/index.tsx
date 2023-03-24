@@ -1,6 +1,6 @@
 import { Flex, Text } from '@mantine/core'
 
-import { ReactComponent as CalendarIcon } from '~/shared/icons/calendar.svg'
+import { StrokeIcon } from '~/shared/icons'
 import { getMonth } from '../../lib/month-mapper'
 
 export const DateLabel = () => {
@@ -11,7 +11,7 @@ export const DateLabel = () => {
 
   return (
     <Flex align="center" gap="sm">
-      <CalendarIcon />
+      <StrokeIcon icon="CalendarIcon" />
       <Text size="lg" weight={600} component="time">
         {day} {getMonth(month)} {year}
       </Text>

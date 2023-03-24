@@ -1,6 +1,7 @@
 import { MantineThemeOverride } from '@mantine/core'
 
 import { Text } from './defaults/text'
+import { Button } from './defaults/button'
 
 export const theme: MantineThemeOverride = {
   respectReducedMotion: true,
@@ -9,6 +10,7 @@ export const theme: MantineThemeOverride = {
   fontFamily: 'Nunito, sans-serif',
   white: '#fafafa',
   black: '#222831',
+  activeStyles: { transform: 'scale(0.95)' },
   shadows: {
     md: 'drop-shadow(0px 10px 25px rgba(29, 52, 54, 0.08))'
   },
@@ -25,7 +27,8 @@ export const theme: MantineThemeOverride = {
   primaryColor: 'accent',
   primaryShade: 5,
   components: {
-    Text
+    Text,
+    Button
   },
   colors: {
     accent: [
