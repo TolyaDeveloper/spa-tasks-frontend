@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom'
 
 import { ROUTES } from '~/shared/config'
-import { HomeSkeleton, CircleStatus } from '~/shared/ui'
+import { HomeSkeleton, CircleStatus, TimeLabel, DateLabel } from '~/shared/ui'
 import { FillIcon } from '~/shared/icons'
 import { SuccessBox } from '~/entities/success-box'
-import { TimeLabel, DateLabel } from '~/entities/time-box'
 
 const Home = () => {
   return (

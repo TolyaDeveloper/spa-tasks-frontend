@@ -1,6 +1,8 @@
 export { BoxTitle } from './box-title'
 export { BoxWrapper } from './box-wrapper'
 export { CircleStatus } from './circle-status'
+export { DateLabel } from './date-label'
 export { Logo } from './logo'
 export { HomeSkeleton } from './skeletons/home'
 export { ProfileSkeleton } from './skeletons/profile'
+export { TimeLabel } from './time-label'
