@@ -11,7 +11,7 @@ export const Layout = () => {
   const { classes } = useStyles()
 
   return (
-    <Container size={1470}>
+    <Container size={1400}>
       <Sidebar />
       <div className={classes.rightSection}>
         <TopBar className={classes.topBar} />
