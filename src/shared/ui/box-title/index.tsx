@@ -5,7 +5,9 @@ import { IBoxTitleProps } from './box-title.props'
 export const BoxTitle = ({ className, title, rightIcon }: IBoxTitleProps) => {
   return (
     <Flex className={className} justify="space-between" align="center" mb={20}>
-      <Title color="accent">{title}</Title>
+      <Title color="accent" size={18}>
+        {title}
+      </Title>
       {rightIcon && rightIcon}
     </Flex>
   )

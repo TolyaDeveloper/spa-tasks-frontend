@@ -1,8 +1,11 @@
 import { Outlet } from 'react-router-dom'
-import { Container } from '@mantine/core'
+import { Container, Stack } from '@mantine/core'
 
 import { DateLabel, TimeLabel } from '~/shared/ui'
 import { TimeBox } from '~/entities/time-box'
+import { CompletionFrequencyBox } from '~/entities/completion-frequency-box'
+import { FactsBox } from '~/entities/facts-box'
+import { PerformanceChart } from '~/entities/performance-chart'
 import { Sidebar } from '~/widgets/sidebar'
 import { TopBar } from '~/widgets/top-bar'
 import { useStyles } from './layout.styles'
@@ -19,13 +22,16 @@ export const Layout = () => {
           <main>
             <Outlet />
           </main>
-          <div>
+          <Stack spacing="xl">
             <TimeBox
               title="So, so, so"
               date={<DateLabel topLabel="Date we got" />}
               time={<TimeLabel topLabel="Time we got" />}
             />
-          </div>
+            <CompletionFrequencyBox />
+            <FactsBox />
+            <PerformanceChart />
+          </Stack>
         </div>
       </div>
     </Container>

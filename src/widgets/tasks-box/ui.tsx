@@ -1,5 +1,5 @@
-import { BoxWrapper, BoxTitle } from '~/shared/ui'
 import { FillIcon } from '~/shared/icons'
+import { BoxTitle, BoxWrapper } from '~/shared/ui'
 
 export const TasksBox = () => {
   return (

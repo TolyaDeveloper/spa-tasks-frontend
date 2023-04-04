@@ -1,0 +1,1 @@
+export { FactsBox } from './ui'
