@@ -1,35 +1,25 @@
-import { Dialog, Notification } from '@mantine/core'
-import { useDisclosure, useNetwork } from '@mantine/hooks'
+import { notifications } from '@mantine/notifications'
+import { useNetwork } from '@mantine/hooks'
 import { useEffect } from 'react'
 
-// ? Todo
+import { NETWORK_STATUS } from './config/constants'
 
 export const NetworkStatus = () => {
-  const [opened, { close, open }] = useDisclosure(false)
   const networkStatus = useNetwork()
 
   useEffect(() => {
     if (!networkStatus.online) {
-      return open()
+      return notifications.show({
+        id: NETWORK_STATUS,
+        message: 'You are offline!',
+        color: 'danger.5',
+        autoClose: false,
+        withCloseButton: false
+      })
     }
 
-    if (opened && networkStatus.online) {
-      return close()
-    }
+    return notifications.hide(NETWORK_STATUS)
   }, [networkStatus.online])
 
-  return (
-    <Dialog
-      opened={opened}
-      size="lg"
-      radius="md"
-      position={{ left: '20px', bottom: '20px' }}
-    >
-      <Notification
-        title="You're offline!"
-        color="danger.4"
-        withCloseButton={false}
-      />
-    </Dialog>
-  )
+  return <></>
 }
