@@ -7,6 +7,8 @@ import { ReactComponent as SunIcon } from './sun.svg'
 import { ReactComponent as UserIcon } from './user.svg'
 
 import { ReactComponent as DotsIcon } from './dots.svg'
+import { ReactComponent as TrashIcon } from './trash.svg'
+import { ReactComponent as EditIcon } from './edit.svg'
 
 import { ReactComponent as AddTaskIcon } from './add-task.svg'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
@@ -23,7 +25,9 @@ export const strokeIcons = {
 }
 
 export const fillIcons = {
-  DotsIcon
+  DotsIcon,
+  TrashIcon,
+  EditIcon
 }
 
 export const regularIcons = {

@@ -28,9 +28,9 @@ export const Layout = () => {
               date={<DateLabel topLabel="Date we got" />}
               time={<TimeLabel topLabel="Time we got" />}
             />
-            <CompletionFrequencyBox />
-            <FactsBox />
-            <PerformanceChart />
+            <CompletionFrequencyBox title="Completion" />
+            <FactsBox title="Fact of the day" />
+            <PerformanceChart title="Performance chart" />
           </Stack>
         </div>
       </div>
