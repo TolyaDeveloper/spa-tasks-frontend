@@ -1,6 +1,7 @@
 import { MantineThemeOverride } from '@mantine/core'
 
 import { Text } from './defaults/text'
+import { Popover } from './defaults/popover'
 import { Button } from './defaults/button'
 
 export const theme: MantineThemeOverride = {
@@ -28,6 +29,7 @@ export const theme: MantineThemeOverride = {
   primaryShade: 5,
   components: {
     Text,
+    Popover,
     Button
   },
   colors: {

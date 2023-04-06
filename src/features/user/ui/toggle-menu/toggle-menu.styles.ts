@@ -6,11 +6,7 @@ export const useStyles = createStyles(theme => ({
   },
   dropdown: {
     padding: '7.5px 0',
-    borderRadius: theme.radius.lg,
-    backgroundColor:
-      theme.colorScheme === 'light'
-        ? theme.colors.background[0]
-        : theme.colors.background[9]
+    borderRadius: theme.radius.lg
   },
   dropdownItem: {
     display: 'flex',
