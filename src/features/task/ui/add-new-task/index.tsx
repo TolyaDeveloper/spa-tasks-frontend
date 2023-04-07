@@ -1,7 +1,6 @@
 import { useDisclosure } from '@mantine/hooks'
 import { Button, Modal } from '@mantine/core'
 
-import { ReactComponent as AddTaskIcon } from '~/shared/icons/add-task.svg'
 import { RegularIcon } from '~/shared/icons'
 
 export const AddNewTask = () => {

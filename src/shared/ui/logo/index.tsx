@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom'
 
-import { ROUTES } from '~/shared/config'
+import { ROUTES } from '../../config'
 import { ReactComponent as LogoIcon } from './logo.svg'
+import { ILogoProps } from './logo.props'
 
-export const Logo = () => {
+export const Logo = ({ className }: ILogoProps) => {
   return (
-    <NavLink to={ROUTES['/']}>
+    <NavLink className={className} to={ROUTES['/']}>
       <LogoIcon />
     </NavLink>
   )

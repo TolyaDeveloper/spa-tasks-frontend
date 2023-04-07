@@ -1,4 +1,4 @@
-import { useMantineColorScheme } from '@mantine/core'
+import { useMantineColorScheme, CheckboxProps } from '@mantine/core'
 
 import {
   IFillIconProps,
@@ -37,4 +37,8 @@ export const RegularIcon = ({ className, icon }: IRegularIconProps) => {
   const Icon = regularIcons[icon]
 
   return <Icon className={className} />
+}
+
+export const CheckboxIcon: CheckboxProps['icon'] = ({ className }) => {
+  return <RegularIcon className={className} icon="CheckboxIcon" />
 }

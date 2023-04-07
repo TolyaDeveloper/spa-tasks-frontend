@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export interface IBoxTitleProps {
+export interface IPerformanceChartProps {
   title: string
   rightIcon?: ReactNode
   className?: string
