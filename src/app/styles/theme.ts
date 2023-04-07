@@ -3,6 +3,7 @@ import { MantineThemeOverride } from '@mantine/core'
 import { Text } from './defaults/text'
 import { Popover } from './defaults/popover'
 import { Button } from './defaults/button'
+import { Checkbox } from './defaults/checkbox'
 
 export const theme: MantineThemeOverride = {
   respectReducedMotion: true,
@@ -30,7 +31,8 @@ export const theme: MantineThemeOverride = {
   components: {
     Text,
     Popover,
-    Button
+    Button,
+    Checkbox
   },
   colors: {
     accent: [

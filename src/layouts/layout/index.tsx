@@ -22,7 +22,7 @@ export const Layout = () => {
           <main>
             <Outlet />
           </main>
-          <Stack spacing="xl">
+          <Stack spacing="xl" style={{ zIndex: -1 }}>
             <TimeBox
               title="So, so, so"
               date={<DateLabel topLabel="Date we got" />}

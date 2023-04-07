@@ -8,7 +8,7 @@ export const EditTask = () => {
 
   return (
     <>
-      <ActionIcon title="Edit task" onClick={open}>
+      <ActionIcon title="Edit task" onClick={open} size="sm">
         <FillIcon icon="EditIcon" />
       </ActionIcon>
       <Modal

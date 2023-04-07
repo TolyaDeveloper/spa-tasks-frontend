@@ -15,10 +15,13 @@ export const DeleteTask = () => {
         shadow="md"
         opened={opened}
         onChange={setOpened}
-        withinPortal={true}
       >
         <Popover.Target>
-          <ActionIcon title="Delete task" onClick={() => setOpened(true)}>
+          <ActionIcon
+            title="Delete task"
+            onClick={() => setOpened(true)}
+            size="sm"
+          >
             <FillIcon icon="TrashIcon" />
           </ActionIcon>
         </Popover.Target>

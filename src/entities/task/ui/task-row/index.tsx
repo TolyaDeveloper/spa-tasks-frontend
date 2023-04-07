@@ -14,8 +14,8 @@ export const TaskRow = ({
   return (
     <div className={cx(classes.taskRow, className)}>
       <div className={classes.leftSection}>
-        <div>{checkbox}</div>
-        <Text ml="sm">{taskTitle}</Text>
+        <div className={classes.checkbox}>{checkbox}</div>
+        <Text>{taskTitle}</Text>
       </div>
       <div className={classes.actions}>{actions}</div>
     </div>
