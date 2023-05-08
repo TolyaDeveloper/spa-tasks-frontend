@@ -14,6 +14,7 @@ import { ReactComponent as AddTaskIcon } from './add-task.svg'
 import { ReactComponent as ArrowIcon } from './arrow.svg'
 import { ReactComponent as PremiumStarIcon } from './premium-star.svg'
 import { ReactComponent as CheckboxIcon } from './checkbox.svg'
+import { ReactComponent as PlusSquareIcon } from './plus-square.svg'
 
 export const strokeIcons = {
   UserIcon,
@@ -35,7 +36,8 @@ export const regularIcons = {
   AddTaskIcon,
   ArrowIcon,
   PremiumStarIcon,
-  CheckboxIcon
+  CheckboxIcon,
+  PlusSquareIcon
 }
 
 export type strokeIconNames = keyof typeof strokeIcons
